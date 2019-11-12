@@ -5,6 +5,8 @@ This demo utilizes quadratic bezier curve and (slightly modified) Verlet integra
 The core principle is to simulate the physics of a 3 linked particles as a "limb" via integrators such as verlet integration or euler method, And using those 3 particles as control points for Quadratic Bézier curve.<br>
 The principle would be pretty much the same even if you use different methods like RK4 or (velocity) Verlet and Euler method.
 
+Note : The way I'm integrating is unstable on high delta time / time scale, Using other stable methods are recommended, If accurate simulation of particles are required.
+
 # Notable function (snippets)
 Following function calculates / evaluates quadratic bezier curve and returns the position :
 ```
